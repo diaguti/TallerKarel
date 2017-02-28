@@ -8,7 +8,7 @@ package Numeros;
 import becker.robots.*;
 public class Escenario {
     private City unal;
-    private Robot joe;
+    private Robot joe;    
     private Thing punto;
     private Wall pared;
     
