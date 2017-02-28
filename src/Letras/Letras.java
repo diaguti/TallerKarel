@@ -34,6 +34,7 @@ public class Letras {
     public void turnRigth(){
         for (int i = 0; i < 3; i++) {
             joe.turnLeft();
+//            joe.
         }      
     }
     
