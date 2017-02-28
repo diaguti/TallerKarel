@@ -6,7 +6,6 @@
 package Numeros;
 
 import becker.robots.*;
-import java.util.Arrays;
 public class Escenario {
     private City unal;
     private Robot joe;
