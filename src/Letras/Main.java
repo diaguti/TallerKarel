@@ -5,6 +5,8 @@
  */
 package Letras;
 
+import becker.robots.City;
+
 /**
  *
  * @author FAMILIA
@@ -12,8 +14,16 @@ package Letras;
 public class Main {
 
     public static void main(String[] args) {
-        Letras letras = new Letras();
-        letras.letraH();
-    }
-    
+        City mapa = new City(10, 20);
+        Letras joe = new Letras(mapa, 5,1);
+        Letras max = new Letras(mapa,5,5);
+        Letras pedro = new Letras(mapa,5,9);
+        Letras daniela = new Letras(mapa,5,13);
+        Letras yo = new Letras(mapa,5,17);
+        joe.letraH();
+        max.letraE();
+        pedro.letraL();
+        daniela.letraL();
+        yo.letraO();
+    }    
 }

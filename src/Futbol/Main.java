@@ -28,7 +28,7 @@ public class Main {
         futbol.advanceLeft();
         futbol.advance(1);
         futbol.advanceRight();
-        futbol.advance(2);
+        futbol.advance(2);        
     }
     
 }

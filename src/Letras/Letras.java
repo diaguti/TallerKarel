@@ -10,30 +10,36 @@ import becker.robots.*;
  * @author FAMILIA
  */
 public class Letras {
-    private City unal;
-    private Robot joe;
-    private Robot sam;
-    private Robot tex;
-    private Robot mac;
-    private Robot tom;
+//    private City unal;
+    private Robot molde;
+//    private Robot joe;
+//    private Robot sam;
+//    private Robot tex;
+//    private Robot mac;
+//    private Robot tom;
     private Thing punto;
     
+    public Letras(City mapa, int x, int y){
+//        this.unal = new City(10, 20);
+        this.molde = new Robot(mapa, x, y, Direction.NORTH, 12);
+//        Robot[] robots = new Robot[5];
+//        robots[1] = new Robot(unal, 5, 1, Direction.NORTH, 12);
+//        this.sam = new Robot(unal, 9, 10, Direction.NORTH, 12);        
+    }
+    
     public Letras(){
-        this.unal = new City(10, 20);
-        this.joe = new Robot(unal, 9, 1, Direction.NORTH, 12);
-        this.sam = new Robot(unal, 9, 10, Direction.NORTH, 12);
         
     }
     
     public void avanzar(int a){
         for (int i = 0; i < a; i++) {
-            joe.move();
+            molde.move();
         }
     }
     
     public void turnRigth(){
         for (int i = 0; i < 3; i++) {
-            joe.turnLeft();
+            molde.turnLeft();
 //            joe.
         }      
     }
@@ -41,22 +47,22 @@ public class Letras {
     public void letraH(){
         for (int i = 0; i < 5; i++) {
             avanzar(1);
-            joe.putThing();
+            molde.putThing();
         }
-        joe.turnLeft();
-        joe.turnLeft();
+        molde.turnLeft();
+        molde.turnLeft();
         avanzar(2);
-        joe.turnLeft();
+        molde.turnLeft();
         for (int i = 0; i < 2; i++) {
             avanzar(1);
-            joe.putThing();
+            molde.putThing();
         }
-        joe.turnLeft();
+        molde.turnLeft();
         avanzar(2);
-        joe.turnLeft();
-        joe.turnLeft();
+        molde.turnLeft();
+        molde.turnLeft();
         for (int i = 0; i < 5; i++) {
-            joe.putThing();
+            molde.putThing();
             avanzar(1);            
         }
     }
@@ -64,33 +70,70 @@ public class Letras {
     public void letraE(){
         for (int i = 0; i < 5; i++) {
             avanzar(1);
-            joe.putThing();
+            molde.putThing();
         }
         turnRigth();
         for (int i = 0; i < 2; i++) {
             avanzar(1);
-            joe.putThing();
+            molde.putThing();
         }
-        joe.turnLeft();
-        joe.turnLeft();
+        molde.turnLeft();
+        molde.turnLeft();
         avanzar(2);
-        joe.turnLeft();
+        molde.turnLeft();
         avanzar(2);
-        joe.turnLeft();
+        molde.turnLeft();
         for (int i = 0; i < 2; i++) {
             avanzar(1);
-            joe.putThing();
+            molde.putThing();
         }
-        joe.turnLeft();
-        joe.turnLeft();
+        molde.turnLeft();
+        molde.turnLeft();
         avanzar(2);
-        joe.turnLeft();
+        molde.turnLeft();
         avanzar(2);
-        joe.turnLeft();
+        molde.turnLeft();
         for (int i = 0; i < 2; i++) {
-            joe.putThing();
             avanzar(1);
+            molde.putThing();            
         }
+        turnRigth();
+        avanzar(1);
     }
     
+    public void letraL(){
+        for (int i = 0; i < 5; i++) {
+            avanzar(1);
+            molde.putThing();
+        }
+        molde.turnLeft();
+        molde.turnLeft();
+        avanzar(4);
+        molde.turnLeft();
+        for (int i = 0; i < 2; i++) {
+            avanzar(1);
+            molde.putThing();            
+        }
+        turnRigth();
+        avanzar(1);
+    }
+    
+    public void letraO(){
+        avanzar(1);
+        for (int i = 0; i < 2; i++) {
+            for (int j = 0; j < 4; j++) {
+                avanzar(1);
+                molde.putThing();
+            }
+            turnRigth();
+            for (int j = 0; j < 2; j++) {
+                avanzar(1);
+                molde.putThing();
+            }
+            turnRigth();
+        }
+        turnRigth();
+        turnRigth();
+        avanzar(1);
+    }
 }
