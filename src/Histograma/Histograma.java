@@ -69,6 +69,7 @@ public class Histograma {
             advance(cant);
             joe.turnLeft();
         }
+        unal.showThingCounts(false);
     }
 
 }

@@ -48,6 +48,7 @@ public class Letras {
         for (int i = 0; i < 5; i++) {
             avanzar(1);
             molde.putThing();
+            
         }
         molde.turnLeft();
         molde.turnLeft();
