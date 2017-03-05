@@ -5,6 +5,8 @@
  */
 package Histograma;
 
+import java.util.Scanner;
+
 /**
  *
  * @author FAMILIA
@@ -15,8 +17,13 @@ public class Main {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        Histograma histograma = new Histograma(5, 6 , 7, 8);
-               
+        Scanner sc = new Scanner(System.in);
+        int a = sc.nextInt();
+        int b = sc.nextInt();
+        int c = sc.nextInt();
+        int d = sc.nextInt();
+        Histograma histograma = new Histograma(a, b , c, d);
+        histograma.evaluarHistograma();
     }
     
     
