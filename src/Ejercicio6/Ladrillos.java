@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package Ladrillos;
+package Ejercicio6;
 
 import becker.robots.*;
 
@@ -58,7 +58,11 @@ public class Ladrillos {
         this.ladrillo = new Thing(unal, 12, 5);
         this.ladrillo = new Thing(unal, 13, 4);
         this.ladrillo = new Thing(unal, 11, 8);
-//        this.ladrillo = new Thing(unal, 9, 5);
+        this.ladrillo = new Thing(unal, 11, 2);
+        this.ladrillo = new Thing(unal, 11, 4);
+        this.ladrillo = new Thing(unal, 10, 3);
+        this.ladrillo = new Thing(unal, 12, 3);
+        this.ladrillo = new Thing(unal, 13, 3);
         this.joe = new Robot(unal, 14, 1, Direction.NORTH);
     }
 
@@ -73,9 +77,13 @@ public class Ladrillos {
             joe.move();
         }
     }
-
+    
+    public void atras(){
+        joe.turnLeft();
+        joe.turnLeft();
+    }
+    
     public void transportar() {
-//        int frente = 0;        
         while (joe.canPickThing() == false && joe.countThingsInBackpack() != 1 && hayLadrillos == true) {
             advance(1);
             if (joe.frontIsClear() == false) {
@@ -102,10 +110,6 @@ public class Ladrillos {
             entradaY = joe.getAvenue();
             salidaX = joe.getStreet() - 3;
             salidaY = joe.getAvenue() + 6;
-            System.out.println(entradaX);
-            System.out.println(entradaY);
-//        joe.getIntersection().getAvenue();
-//        joe.getIntersection().getStreet();
 
             if (joe.getDirection() == Direction.NORTH) {
                 if (joe.getAvenue() > 1) {
@@ -115,8 +119,7 @@ public class Ladrillos {
                     }
                     turnRight();
                 }
-                joe.turnLeft();
-                joe.turnLeft();
+                atras();
 //            while (joe.getAvenue() > 1){
 //                
 //            }
@@ -154,11 +157,8 @@ public class Ladrillos {
                 turnRight();
             }
             joe.putThing();
-            System.out.println(salidaX);
-            System.out.println(salidaY);
             if (joe.getDirection() == Direction.NORTH) {
-                joe.turnLeft();
-                joe.turnLeft();
+                atras();
                 while (joe.getStreet() < 11) {
                     advance(1);
                 }
@@ -180,8 +180,7 @@ public class Ladrillos {
     }
     
     public void posicionFinal(){
-        joe.turnLeft();
-        joe.turnLeft();
+        atras();
         while (joe.getAvenue() > 1) {            
             advance(1);
         }

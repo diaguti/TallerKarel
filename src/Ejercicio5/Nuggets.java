@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package Nuggets;
+package Ejercicio5;
 
 import becker.robots.*;
         
@@ -81,9 +81,14 @@ public class Nuggets {
             joe.turnLeft();
         }
     }
+    
+    public void atras(){
+        joe.turnLeft();
+        joe.turnLeft();
+    }
     public void buscarCasa(){
 //        while (joe.countThingsInBackpack() != 4) {            
-            while (joe.frontIsClear() == true && joe.countThingsInBackpack() != 4) {                
+            while (joe.frontIsClear() == true && (joe.getAvenue() != 12 || joe.getStreet() != 10)) {                
                 joe.move();
                 if (joe.canPickThing() == true) {
                     joe.pickThing();
@@ -91,8 +96,7 @@ public class Nuggets {
                 if (joe.frontIsClear() == false) {
                     turnRight();
                     if (joe.frontIsClear() == false) {
-                        joe.turnLeft();
-                        joe.turnLeft();
+                        atras();
                     }
                 }
             }

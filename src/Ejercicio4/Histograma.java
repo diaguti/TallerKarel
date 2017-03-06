@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package Histograma;
+package Ejercicio4;
 
 import becker.robots.*;
 import java.util.Scanner;
@@ -49,6 +49,11 @@ public class Histograma {
             joe.turnLeft();
         }
     }
+    
+    public void atras(){
+        joe.turnLeft();
+        joe.turnLeft();
+    }
 
     public void evaluarHistograma() {
         for (int i = 0; i < 4; i++) {
@@ -64,8 +69,7 @@ public class Histograma {
                 advance(1);
                 cant++;
             }
-            joe.turnLeft();
-            joe.turnLeft();
+            atras();
             advance(cant);
             joe.turnLeft();
         }

@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package Futbol;
+package Ejercicio1;
 import becker.robots.*;
 import becker.gui.*;
 import becker.util.*;
@@ -25,8 +25,7 @@ public class Futbol {
         this.balon = new Thing(unal, 9, 9);
         this.joe = new Robot(unal, 9, 9, Direction.WEST);
     }
-    public void advance(int i){  
-                luz.isOn();
+    public void advance(int i){            
 
         joe.pickThing();
         for (int j = 0; j < i; j++) {

@@ -3,32 +3,19 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package Letras;
+package Ejercicio3;
 import becker.robots.*;
 /**
  *
  * @author FAMILIA
  */
 public class Letras {
-//    private City unal;
     private Robot molde;
-//    private Robot joe;
-//    private Robot sam;
-//    private Robot tex;
-//    private Robot mac;
-//    private Robot tom;
+
     private Thing punto;
     
     public Letras(City mapa, int x, int y){
-//        this.unal = new City(10, 20);
-        this.molde = new Robot(mapa, x, y, Direction.NORTH, 12);
-//        Robot[] robots = new Robot[5];
-//        robots[1] = new Robot(unal, 5, 1, Direction.NORTH, 12);
-//        this.sam = new Robot(unal, 9, 10, Direction.NORTH, 12);        
-    }
-    
-    public Letras(){
-        
+        this.molde = new Robot(mapa, x, y, Direction.NORTH, 12);        
     }
     
     public void avanzar(int a){
@@ -40,8 +27,12 @@ public class Letras {
     public void turnRigth(){
         for (int i = 0; i < 3; i++) {
             molde.turnLeft();
-//            joe.
         }      
+    }
+    
+    public void atras(){
+        molde.turnLeft();
+        molde.turnLeft();
     }
     
     public void letraH(){
@@ -50,8 +41,7 @@ public class Letras {
             molde.putThing();
             
         }
-        molde.turnLeft();
-        molde.turnLeft();
+        atras();
         avanzar(2);
         molde.turnLeft();
         for (int i = 0; i < 2; i++) {
@@ -60,8 +50,7 @@ public class Letras {
         }
         molde.turnLeft();
         avanzar(2);
-        molde.turnLeft();
-        molde.turnLeft();
+        atras();
         for (int i = 0; i < 5; i++) {
             molde.putThing();
             avanzar(1);            
@@ -78,8 +67,7 @@ public class Letras {
             avanzar(1);
             molde.putThing();
         }
-        molde.turnLeft();
-        molde.turnLeft();
+        atras();
         avanzar(2);
         molde.turnLeft();
         avanzar(2);
@@ -88,8 +76,7 @@ public class Letras {
             avanzar(1);
             molde.putThing();
         }
-        molde.turnLeft();
-        molde.turnLeft();
+        atras();
         avanzar(2);
         molde.turnLeft();
         avanzar(2);
@@ -107,8 +94,7 @@ public class Letras {
             avanzar(1);
             molde.putThing();
         }
-        molde.turnLeft();
-        molde.turnLeft();
+        atras();
         avanzar(4);
         molde.turnLeft();
         for (int i = 0; i < 2; i++) {
@@ -133,8 +119,7 @@ public class Letras {
             }
             turnRigth();
         }
-        turnRigth();
-        turnRigth();
+        atras();
         avanzar(1);
     }
 }

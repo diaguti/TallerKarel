@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package Letras;
+package Ejercicio3;
 
 import becker.robots.City;
 
@@ -14,16 +14,16 @@ import becker.robots.City;
 public class Main {
 
     public static void main(String[] args) {
-        City mapa = new City(10, 20);
+        City mapa = new City(6, 20);
         Letras joe = new Letras(mapa, 5,1);
         Letras max = new Letras(mapa,5,5);
-        Letras pedro = new Letras(mapa,5,9);
-        Letras daniela = new Letras(mapa,5,13);
-        Letras yo = new Letras(mapa,5,17);
+        Letras tim = new Letras(mapa,5,9);
+        Letras lena = new Letras(mapa,5,13);
+        Letras tex = new Letras(mapa,5,17);
         joe.letraH();
         max.letraE();
-        pedro.letraL();
-        daniela.letraL();
-        yo.letraO();
+        tim.letraL();
+        lena.letraL();
+        tex.letraO();
     }    
 }
